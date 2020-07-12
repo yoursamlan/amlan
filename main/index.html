@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>OS Amlan 1.0 Alpha</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
+    <link rel='stylesheet' href='https://ionicons.com/css/ionicons.min.css'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Questrial'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fontawesome/4.7.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href='https://codepen.io/Varo/pen/vLdvMK.css'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Varela+Round'>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <!--script src='https://cdn.jsdelivr.net/npm/darkmode-js@1.3.4/lib/darkmode-js.min.js'></script>
+    <script src="dark.js"></script-->
+
+</head>
+
+<body>
+    
+    
+    <div class="startmenu">
+        <label class="searchApp"><i></i><input type="text" placeholder="Search" data-search spellcheck="false" class="startmenuSearch" /></label>
+
+        <div class="page startmenuAppList">
+            <div class="app" data-filter-item data-filters=" about me Amlan " data-window="about">
+                <div class="icon" data-icon="about"></div>
+                <div class="name">About me</div>
+            </div>
+            <div class="sep">Services</div>
+            <div class="app" data-filter-item data-filters=" word excel and powerpoint document microsoft office" data-window="msoffice">
+                <div class="icon" data-icon="ms office"></div>
+                <div class="name">Word, Excel and PowerPoint</div>
+            </div>
+            <div class="app" data-filter-item data-filters="logo design illustration and photoshop adobe" data-window="chrome">
+                <div class="icon" data-icon="adobe ps"></div>
+                <div class="name">Logo design, Illustration and Photoshop</div>
+            </div>
+            <div class="app" data-filter-item data-filters="web webdesign wordpress development webdevelopment" data-window="chrome1">
+                <div class="icon" data-icon="wordpress"></div>
+                <div class="name">Web and Wordpress development</div>
+            </div>
+            <div class="app" data-filter-item data-filters="automation python" data-window="chrome">
+                <div class="icon" data-icon="python"></div>
+                <div class="name">Automation using Python</div>
+            </div>
+            <div class="sep1"></div>
+            <div class="app" data-filter-item data-filters="why me amlan" data-window="whyme">
+                <div class="icon" data-icon="why"></div>
+                <div class="name">Why me ? </div>
+            </div>
+            <div class="sep1"></div>
+            <div class="app" data-filter-item data-filters="some of my projects portfolio" data-window="chrome">
+                <div class="icon" data-icon="work"></div>
+                <div class="name">Some of my projects</div>
+            </div>
+            <div class="sep1"></div>
+            <div class="app" data-filter-item data-filters="Contact" data-window="chrome">
+                <div class="icon" data-icon="contact"></div>
+                <div class="name">Contact</div>
+            </div>
+        </div>
+        
+        <a href="" class="user">
+            <div class="icon" data-icon="users"></div>
+            <div class="version">1.0</div>
+        </a>
+        
+    </div>
+    <div class="taskbar">
+        <div class="taskbar__blur"></div>
+        <div class="openAppsMenu"></div>
+        <center style="height:34px;max-height:34px;">
+            <a class="taskbar__item taskbar__item--preferences" data-window="preferences"><i></i></a>
+            <a class="taskbar__item taskbar__item--about" data-window="about"><i></i></a>
+            <a class="taskbar__item taskbar__item--msoffice" data-window="msoffice"><i></i></a>
+            <a class="taskbar__item taskbar__item--photoshop" data-window="photoshop"><i></i></a>
+            <a class="taskbar__item taskbar__item--wordpress" data-window="wordpress"><i></i></a>
+            <a class="taskbar__item taskbar__item--python" data-window="python"><i></i></a>
+            <a class="taskbar__item taskbar__item--ppt" data-window="whyme"><i></i></a>
+            <a class="taskbar__item taskbar__item--projects" data-window="projects"><i></i></a>
+            <a class="taskbar__item taskbar__item--contact" data-window="contact"><i></i></a>
+        </center>
+        
+        <div class="panel">
+            <div class="section power" data-section="power" data-percentage="75">
+                <div class="powerIcon"><i></i></div>
+            </div>
+            <div class="section time" data-section="time"></div>
+        </div>
+
+
+        <div class="powerPanel sectionContent" id="power">
+            <div class="percentage">75%</div>
+            <div class="powerTimeRemaining">6 hours 35 minutes remaining</div>
+            <div class="list">
+                <div class="item canCheck">Power saving mode<div class="status sEnergySaver"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dateTooltip sectionContent" id="time">
+            <div class="calendarIcon" data-tooltip="Open calendar app">
+                <div class="day"></div>
+                <div class="dayNumber"></div>
+            </div>
+            <div class="date"><span class="month"></span><span class="year"></span></div>
+            <div class="currentTime"></div>
+            <div class="calendar"></div>
+        </div>
+
+
+    </div>
+    </div>
+    <div class="desktop">
+        
+        <div class="window window--chrome window--minimized" data-window="chrome" style="width:800px;height:500px;top:30%;left:3%;">
+            <div class="window__handler chrome">
+                <!--<input type="text" class="search" spellcheck="false" placeholder="Search or enter website name"/>-->
+                <div class="window__controls">
+                    <a class="window__minimize"></a>
+                    <a class="window__maximize"></a>
+                    <a class="window__close"></a>
+                </div>
+            </div>
+            <div class="window__body">
+                <!--<div class="tabs"><div class="tab current"><div class="icon" style="background:url(https://bit.ly/2UVHDOC)"></div>Google<a href="#" class="close"></a></div></div>-->
+                <img style="pointer-events:none;width:272px;height:92px;position:absolute;top:calc(50% - 72px);left:calc(50% - 136px);" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNzIiIGhlaWdodD0iOTIiPjxwYXRoIGZpbGw9IiNFQTQzMzUiIGQ9Ik0xMTUuNzUgNDcuMThjMCAxMi43Ny05Ljk5IDIyLjE4LTIyLjI1IDIyLjE4cy0yMi4yNS05LjQxLTIyLjI1LTIyLjE4QzcxLjI1IDM0LjMyIDgxLjI0IDI1IDkzLjUgMjVzMjIuMjUgOS4zMiAyMi4yNSAyMi4xOHptLTkuNzQgMGMwLTcuOTgtNS43OS0xMy40NC0xMi41MS0xMy40NFM4MC45OSAzOS4yIDgwLjk5IDQ3LjE4YzAgNy45IDUuNzkgMTMuNDQgMTIuNTEgMTMuNDRzMTIuNTEtNS41NSAxMi41MS0xMy40NHoiLz48cGF0aCBmaWxsPSIjRkJCQzA1IiBkPSJNMTYzLjc1IDQ3LjE4YzAgMTIuNzctOS45OSAyMi4xOC0yMi4yNSAyMi4xOHMtMjIuMjUtOS40MS0yMi4yNS0yMi4xOGMwLTEyLjg1IDkuOTktMjIuMTggMjIuMjUtMjIuMThzMjIuMjUgOS4zMiAyMi4yNSAyMi4xOHptLTkuNzQgMGMwLTcuOTgtNS43OS0xMy40NC0xMi41MS0xMy40NHMtMTIuNTEgNS40Ni0xMi41MSAxMy40NGMwIDcuOSA1Ljc5IDEzLjQ0IDEyLjUxIDEzLjQ0czEyLjUxLTUuNTUgMTIuNTEtMTMuNDR6Ii8+PHBhdGggZmlsbD0iIzQyODVGNCIgZD0iTTIwOS43NSAyNi4zNHYzOS44MmMwIDE2LjM4LTkuNjYgMjMuMDctMjEuMDggMjMuMDctMTAuNzUgMC0xNy4yMi03LjE5LTE5LjY2LTEzLjA3bDguNDgtMy41M2MxLjUxIDMuNjEgNS4yMSA3Ljg3IDExLjE3IDcuODcgNy4zMSAwIDExLjg0LTQuNTEgMTEuODQtMTN2LTMuMTloLS4zNGMtMi4xOCAyLjY5LTYuMzggNS4wNC0xMS42OCA1LjA0LTExLjA5IDAtMjEuMjUtOS42Ni0yMS4yNS0yMi4wOSAwLTEyLjUyIDEwLjE2LTIyLjI2IDIxLjI1LTIyLjI2IDUuMjkgMCA5LjQ5IDIuMzUgMTEuNjggNC45NmguMzR2LTMuNjFoOS4yNXptLTguNTYgMjAuOTJjMC03LjgxLTUuMjEtMTMuNTItMTEuODQtMTMuNTItNi43MiAwLTEyLjM1IDUuNzEtMTIuMzUgMTMuNTIgMCA3LjczIDUuNjMgMTMuMzYgMTIuMzUgMTMuMzYgNi42MyAwIDExLjg0LTUuNjMgMTEuODQtMTMuMzZ6Ii8+PHBhdGggZmlsbD0iIzM0QTg1MyIgZD0iTTIyNSAzdjY1aC05LjVWM2g5LjV6Ii8+PHBhdGggZmlsbD0iI0VBNDMzNSIgZD0iTTI2Mi4wMiA1NC40OGw3LjU2IDUuMDRjLTIuNDQgMy42MS04LjMyIDkuODMtMTguNDggOS44My0xMi42IDAtMjIuMDEtOS43NC0yMi4wMS0yMi4xOCAwLTEzLjE5IDkuNDktMjIuMTggMjAuOTItMjIuMTggMTEuNTEgMCAxNy4xNCA5LjE2IDE4Ljk4IDE0LjExbDEuMDEgMi41Mi0yOS42NSAxMi4yOGMyLjI3IDQuNDUgNS44IDYuNzIgMTAuNzUgNi43MiA0Ljk2IDAgOC40LTIuNDQgMTAuOTItNi4xNHptLTIzLjI3LTcuOThsMTkuODItOC4yM2MtMS4wOS0yLjc3LTQuMzctNC43LTguMjMtNC43LTQuOTUgMC0xMS44NCA0LjM3LTExLjU5IDEyLjkzeiIvPjxwYXRoIGZpbGw9IiM0Mjg1RjQiIGQ9Ik0zNS4yOSA0MS40MVYzMkg2N2MuMzEgMS42NC40NyAzLjU4LjQ3IDUuNjggMCA3LjA2LTEuOTMgMTUuNzktOC4xNSAyMi4wMS02LjA1IDYuMy0xMy43OCA5LjY2LTI0LjAyIDkuNjZDMTYuMzIgNjkuMzUuMzYgNTMuODkuMzYgMzQuOTEuMzYgMTUuOTMgMTYuMzIuNDcgMzUuMy40N2MxMC41IDAgMTcuOTggNC4xMiAyMy42IDkuNDlsLTYuNjQgNi42NGMtNC4wMy0zLjc4LTkuNDktNi43Mi0xNi45Ny02LjcyLTEzLjg2IDAtMjQuNyAxMS4xNy0yNC43IDI1LjAzIDAgMTMuODYgMTAuODQgMjUuMDMgMjQuNyAyNS4wMyA4Ljk5IDAgMTQuMTEtMy42MSAxNy4zOS02Ljg5IDIuNjYtMi42NiA0LjQxLTYuNDYgNS4xLTExLjY1bC0yMi40OS4wMXoiLz48L3N2Zz4=" />
+                <input maxlength="100" spellcheck="false" value="Try to press 'ESC'" placeholder="Search or enter website name" style="position:absolute;top:calc(50% + 36px);left:calc(50% - 200px);width:400px;height:40px;background:#f1f1f1;border-radius:10px;line-height:40px;padding: 0 20px;font-size:16px;font-weight:700;color:rgba(0,0,0,.75);overflow:hidden;border:none;box-shadow: 0 10px 20px rgba(0,0,0,.1), 0 2px 2px rgba(0,0,0,.05);"></input>
+            </div>
+        </div>
+
+
+
+
+
+
+            <div class="window window--chrome window--minimized" data-window="whyme" style="width:776px;height:486px;top:10%;left:5%;">
+                <div class="window__handler chrome">
+                    <!--<input type="text" class="search" spellcheck="false" placeholder="Search or enter website name"/>-->
+                    <div class="window__controls">
+                        <a class="window__minimize"></a>
+                        <!--a class="window__maximize"></a-->
+                        <a class="window__close"></a>
+                    </div>
+                </div>
+                <div class="window__body">
+                    <div class="tabs-ppt">
+
+                        <div>
+                            <iframe src="https://onedrive.live.com/embed?cid=86DA50D9CB255DBF&resid=86DA50D9CB255DBF%21289&authkey=AFG3S_b9KW0AhCU&em=2" frameborder="0" width="756px" height="450px" scrolling="no"></iframe>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+
+
+
+            <div class="window window--chrome window--minimized" data-window="msoffice" style="width:776px;height:486px;top:10%;left:5%;">
+                <div class="window__handler chrome">
+                    <!--<input type="text" class="search" spellcheck="false" placeholder="Search or enter website name"/>-->
+                    <div class="window__controls">
+                        <a class="window__minimize"></a>
+                        <!--a class="window__maximize"></a-->
+                        <a class="window__close"></a>
+                    </div>
+                </div>
+                <div class="window__body">
+                    <div class="tabs-ppt">
+
+                        <div>
+                            <iframe src="https://onedrive.live.com/embed?cid=86DA50D9CB255DBF&resid=86DA50D9CB255DBF%21289&authkey=AFG3S_b9KW0AhCU&em=2" frameborder="0" width="756px" height="450px" scrolling="no"></iframe>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+
+
+                <div class="window window--video window--minimized" data-window="video" style="width:795px;height:475px;top:25%;left:9%;min-width:795px;min-height:475px;">
+                    <div class="window__handler">
+                        <div class="window__controls">
+                            <a class="window__minimize"></a>
+                            <a class="window__maximize"></a>
+                            <a class="window__close"></a>
+                        </div>
+                    </div>
+                    <div class="window__body solidHandler">
+
+                        <video id="my-video" class="video-js" controls preload="auto" poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg" data-setup='' loop>
+                            <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4" type='video/mp4'>
+                        </video>
+                    </div>
+                </div>
+
+                <!--<div class="window window--notepad window--minimized" data-window="notepad" style="width:400px;height:300px;top:10%;left:30%;">
+    <div class="window__handler">
+      <span class="window__title">
+        Notes
+      </span>
+      <div class="window__controls">
+        <a class="window__minimize"></a>
+        <a class="window__maximize"></a>
+        <a class="window__close"></a>
+      </div>
+    </div>
+    <div class="window__body">
+      <div class="window__main">
+        <textarea class="full-textarea" spellcheck="false"></textarea>
+      </div>
+    </div>
+  </div>-->
+
+                <div class="window window--preferences window--minimized" data-window="preferences" style="width:400px;height:400px;top:10%;left:30%;max-width:620px;max-height:620px;">
+                    <div class="window__handler">
+                        <div class="window__controls">
+                            <a class="window__minimize"></a>
+                            <a class="window__disabled"></a>
+                            <a class="window__close"></a>
+                        </div>
+                    </div>
+                    <div class="window__body solidHandler">
+                        <div class="window__main">
+                            <div class="list">
+                                <h3 id="AppName">Help</h3>
+                                <p>Welcome to <strong class="NalmaName">nalma</strong> 1.0, an interactive Operating System like portfolio, designed and developed by <b class="Authorname">Amlan Saha Kundu.</b></p>
+                                    <p>To launch the <b>MENU</b>, either press <b>ESC</b> on your keyboard or click to the <b style="color:darkmagenta;">bottom-left circle</b> of the screen.</p>
+                                <br>
+                                <h3 id="AppName">Settings</h3>
+                                <div class="item canCheck">Animate app icons when open<div class="status sAnimateAppsIconOnOpen"></div>
+                                
+                                    
+                                    </div>
+                                    
+                                </div>
+                                <!--<div class="item canCheck">Hide taskbar on unactivity<div class="status sHideTaskbarOnInactivity"></div></div>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--<div class="window window--terminal window--minimized" data-window="terminal" style="width:600px;height:400px;top:20%;left:50%;">
+    <div class="window__handler">
+      <span class="window__title">
+        Terminal
+      </span>
+      <div class="window__controls">
+        <a class="window__minimize"></a>
+        <a class="window__disabled"></a>
+        <a class="window__close"></a>
+      </div>
+    </div>
+    <div class="window__body black">
+      <div class="window__main anim">
+    <div id="outputs" class="outputs">
+    </div>
+    <div for="cmd-input" class='console-prompt-box'>
+      <input id="input" type="text" class='console-input' placeholder="Type command..." spellcheck="false"><span class="cmd-pre">></span>
+    </div>
+      </div>
+    </div>
+  </div>-->
+
+            </div>
+
+
+            <div class="context" hidden>
+                <div class="context_item">
+                    <div class="inner_item">Copy</div>
+                </div>
+                <div class="context_item">
+                    <div class="inner_item">Cut</div>
+                </div>
+                <div class="context_item">
+                    <div class="inner_item">Paste</div>
+                </div>
+                <div class="context_hr"></div>
+                <div class="context_item">
+                    <div class="inner_item more">Share</div>
+                </div>
+                <div class="context_item">
+                    <div class="inner_item more">More</div>
+                </div>
+                <div class="background"></div>
+            </div>
+            <!-- partial -->
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+            <script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+            <script src='https://cdn.rawgit.com/desandro/masonry/master/dist/masonry.pkgd.min.js'></script>
+            <script src='https://vjs.zencdn.net/5.4.6/video.js'></script>
+            <script src="./script.js"></script>
+
+</body>
+
+</html>
